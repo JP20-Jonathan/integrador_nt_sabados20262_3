@@ -96,6 +96,7 @@ def ensuciar(datos_df):
   
     #Mezclar el formato de las fechas 
     #ISO=> 2026/10/03 YYY/mm/dd HH:MM:SS
+    
     #LATINO=>03/10/2026  d/m/y h/M
 
     iso=datos_df["fechas_registro"].dt.strtime("%Y-%m-%d %H:%M:%S")
