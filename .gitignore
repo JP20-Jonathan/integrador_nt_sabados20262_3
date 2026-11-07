@@ -1,0 +1,16 @@
+# Entorno y caché de Python
+.venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Skills de revisión (se usan en local; los zips están fuera del repo)
+revisar-simulacion-registros/
+limpiar-registros/
+consultar-registros/
+graficar-registros/
+
+# Datos generados por los scripts (se recrean al ejecutar)
+data/
