@@ -52,27 +52,19 @@ def generar_datos(numero_filas=FILAS):
     return registros
 
 
-#5 Convirtiendo los datos generados en un dataframe con PANDAS
-tabla_ordenada_registros = pd.DataFrame(generar_datos())
+#5. Preparar la simulación para ensuciar mis datos
 
-
-#6 Probar la función
-print(tabla_ordenada_registros)
-
-
-#7. Preparar la simulación para ensuciar mis datos
-
-#7.1 Función para obtener una muestra de los datos
+#5.1 Función para obtener una muestra de los datos
 def obtener_muestra(datos, porcentaje):
     return datos.sample(frac=porcentaje, random_state=random.randint(0, 9999)).index
 
-#7.2 Función Auxiliar para cambiar los valores de un texto
+#5.2 Función Auxiliar para cambiar los valores de un texto
 def escribir_mal(texto):
     variantes = [texto.lower(), texto.upper(), f" {texto} "]
     return random.choice(variantes)
 
 
-#7.3 Función principal para ensuciar los datos simulados
+#5.3 Función principal para ensuciar los datos simulados
 def ensuciar(datos_df):
     datos_df = datos_df.copy()
 
@@ -98,9 +90,25 @@ def ensuciar(datos_df):
     filas_elegidas = obtener_muestra(datos_df, 0.25)
     datos_df.loc[filas_elegidas, "fecha_registro"] = latino.loc[filas_elegidas]
 
+    #Duplicados exactos: el 5% de las filas queda repetido tal cual (copia completa de otra fila, con su mismo id)
+    #Va al final para que la copia salga con todos los errores ya puestos
+    filas_elegidas = obtener_muestra(datos_df, 0.05)
+    filas_origen = datos_df.drop(filas_elegidas).sample(n=len(filas_elegidas), random_state=random.randint(0, 9999))
+    datos_df.loc[filas_elegidas] = filas_origen.values
+
     return datos_df
 
 
-#8 Probar los datos sucios
-tabla_sucia_registros = ensuciar(tabla_ordenada_registros)
-print(tabla_sucia_registros)
+#6 Función que arma todo y devuelve el DataFrame sucio (la importa exportar_registros.py)
+def generar_registros(n=800):
+    df = pd.DataFrame(generar_datos(n))
+    df = ensuciar(df)
+    return df
+
+
+#7 Probar los datos sucios (solo cuando se ejecuta este archivo directamente)
+if __name__ == "__main__":
+    df = generar_registros()
+    print(df.shape)
+    print(df.head())
+    print(df.isna().sum())
