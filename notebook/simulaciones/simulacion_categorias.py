@@ -33,7 +33,7 @@ fake=Faker("es_CO")
 
 #4. Funcion generadora
 
-def generar_categorias(numero_filas=FILAS):
+def generar_datos(numero_filas=FILAS):
     categorias=[]
     for _ in range(numero_filas):
         categorias.append({
@@ -46,7 +46,7 @@ def generar_categorias(numero_filas=FILAS):
 
 
 #5 convirtiendo los datos generados en un dataframe con PANDAS
-tabla_ordenada_categorias=pd.DataFrame(generar_categorias())
+tabla_ordenada_categorias=pd.DataFrame(generar_datos())
 
 
 #6 provar la funcion
@@ -87,6 +87,12 @@ def ensuciar(datos_df):
     datos_df=pd.concat([datos_df,datos_df.loc[filas_elegidas]],ignore_index=True)
 
     return datos_df
+
+
+#Funcion que arma todo y devuelve el DataFrame sucio (la importa exportacion_categorias.py)
+def generar_categorias(numero_filas=FILAS):
+    df = pd.DataFrame(generar_datos(numero_filas))
+    return ensuciar(df)
 
 
 #8 probar los datos sucios
