@@ -14,3 +14,6 @@ graficar-registros/
 
 # Datos generados por los scripts (se recrean al ejecutar)
 data/
+
+# Reportes generados (gráficas PNG producidas al correr los main)
+reportes/
