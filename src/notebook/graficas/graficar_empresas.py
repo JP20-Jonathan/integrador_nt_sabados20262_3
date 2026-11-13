@@ -4,7 +4,7 @@ Lee   data/limpio/empresas_limpio.csv
 Guarda reportes/empresas_grafica_1.png, _2.png y _3.png
 
 Se puede ejecutar solo (desde la raíz del proyecto):
-    python notebook/graficas/graficar_empresas.py
+    python src/notebook/graficas/graficar_empresas.py
 o desde main_empresa.py:
     python main_empresa.py
 """
@@ -18,9 +18,9 @@ import matplotlib.pyplot as plt  # noqa: E402
 import pandas as pd  # noqa: E402
 from matplotlib.ticker import MaxNLocator  # noqa: E402
 
-# Rutas: este archivo está en <raiz>/notebook/graficas/
+# Rutas: este archivo está en <raiz>/src/notebook/graficas/
 CARPETA_GRAFICAS = os.path.dirname(os.path.abspath(__file__))
-RAIZ_PROYECTO = os.path.dirname(os.path.dirname(CARPETA_GRAFICAS))
+RAIZ_PROYECTO = os.path.dirname(os.path.dirname(os.path.dirname(CARPETA_GRAFICAS)))
 
 RUTA_LIMPIO = os.path.join(RAIZ_PROYECTO, "data", "limpio", "empresas_limpio.csv")
 CARPETA_REPORTES = os.path.join(RAIZ_PROYECTO, "reportes")

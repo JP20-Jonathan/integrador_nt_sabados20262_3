@@ -26,7 +26,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent
 os.chdir(RAIZ)
 for carpeta in ("exportacion", "limpieza", "consultas", "graficas"):
-    sys.path.insert(0, str(RAIZ / "notebook" / carpeta))
+    sys.path.insert(0, str(RAIZ / "src" / "notebook" / carpeta))
 
 from exportacion_usuario import exportar_usuarios
 from limpieza_usuario import limpiar_usuarios, RUTA_SUCIO, RUTA_LIMPIO

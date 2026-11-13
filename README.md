@@ -11,7 +11,7 @@ y un main propio que ejecuta solo esa tabla.
 main_usuarios.py              <- main de cada tabla (main_<tabla>s.py)
 main_registros.py
 requirements.txt
-notebook/
+src/notebook/
   simulaciones/   simulacion_<tabla>.py    F01: Faker + ensuciar   -> generar_<tabla>s(n) devuelve el DataFrame
   exportacion/    exportacion_<tabla>.py   X01: csv, xlsx y json   -> data/crudo/<tabla>s_sucio.*
   limpieza/       limpieza_<tabla>.py      L01: limpiar con pandas -> data/limpio/<tabla>s_limpio.csv
@@ -31,7 +31,7 @@ reportes/         (sí se sube: las gráficas de cada tabla)
 ## Cómo agregar tu tabla
 
 1. Crea tu rama desde `develop`: `git switch -c feature/pipeline_<tabla> develop`.
-2. Crea tus 5 scripts en las carpetas de `notebook/` con el nombre `<etapa>_<tabla>.py`.
+2. Crea tus 5 scripts en las carpetas de `src/notebook/` con el nombre `<etapa>_<tabla>.py`.
    Usa como ejemplo los de `usuario` o `registro`.
 3. Usa las rutas de las HU, relativas a la raíz: `data/crudo/`, `data/limpio/` y `reportes/`.
    Nombra tus archivos con el nombre de tu tabla (`retos_sucio.csv`, `retos_grafica_1.png`...)

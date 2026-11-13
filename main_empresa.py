@@ -14,10 +14,10 @@ import os
 
 import pandas as pd
 
-from notebook.exportacion.exportar_empresas import CARPETA_CRUDO, exportar
-from notebook.limpieza.limpiar_empresas import limpiar_empresas
-from notebook.consultas.consultas_empresas import consultar_empresas
-from notebook.graficas.graficar_empresas import CARPETA_REPORTES, graficar_empresas
+from src.notebook.exportacion.exportar_empresas import CARPETA_CRUDO, exportar
+from src.notebook.limpieza.limpiar_empresas import limpiar_empresas
+from src.notebook.consultas.consultas_empresas import consultar_empresas
+from src.notebook.graficas.graficar_empresas import CARPETA_REPORTES, graficar_empresas
 
 GRAFICAS_ESPERADAS = [
     "empresas_grafica_1.png",

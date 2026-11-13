@@ -2,7 +2,7 @@
 reporte_registro.py - HU G01: tres graficas con matplotlib y conclusiones de `registros`.
 
 Ejecutar desde la raiz del proyecto:
-    python notebook/graficas/reporte_registro.py
+    python src/notebook/graficas/reporte_registro.py
         lee data/limpio/registros_limpio.csv y guarda reportes/registros_grafica_N.png
         (si existe data/crudo/registros_sucio.csv, lo usa para contar las inscripciones
         duplicadas que la limpieza ya elimino)
