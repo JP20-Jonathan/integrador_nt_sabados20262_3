@@ -2,7 +2,7 @@
 limpieza_registro.py - HU L01: limpia los datos de `registros` con pandas.
 
 Ejecutar desde la raiz del proyecto:
-    python notebook/limpieza/limpieza_registro.py
+    python src/notebook/limpieza/limpieza_registro.py
         lee data/crudo/registros_sucio.csv y guarda data/limpio/registros_limpio.csv
 
 Imprime el diagnostico ANTES y DESPUES de limpiar (shape, info, nulos, duplicados)

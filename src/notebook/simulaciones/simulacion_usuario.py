@@ -8,7 +8,7 @@ sobrantes, mayusculas mezcladas y formatos distintos. Esos errores son los que s
 arreglan en la etapa de limpieza.
 
 Ejecutar desde la raiz del proyecto:
-    python notebook/simulaciones/simulacion_usuario.py
+    python src/notebook/simulaciones/simulacion_usuario.py
 '''
 
 import random

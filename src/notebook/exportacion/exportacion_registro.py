@@ -3,14 +3,14 @@ Exporta los datos sucios de `registros` a CSV, Excel y JSON en data/crudo/.
 Son los archivos que va a leer la etapa de limpieza.
 
 Ejecutar desde la raíz del proyecto:
-    python notebook/exportacion/exportacion_registro.py
+    python src/notebook/exportacion/exportacion_registro.py
 '''
 
 import os
 import sys
 from pathlib import Path
 
-#1. Poder importar la simulación, que vive en notebook/simulaciones/
+#1. Poder importar la simulación, que vive en src/notebook/simulaciones/
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "simulaciones"))
 from simulacion_registro import generar_registros
 

@@ -1,7 +1,7 @@
 """HU X01 - Exporta la tabla empresas sucia a CSV, Excel y JSON.
 
 Se puede ejecutar solo (desde la raíz del proyecto):
-    python notebook/exportacion/exportar_empresas.py
+    python src/notebook/exportacion/exportar_empresas.py
 o desde main_empresa.py:
     python main_empresa.py
 """
@@ -10,10 +10,10 @@ import os
 import sys
 from importlib import import_module
 
-# Rutas: este archivo está en <raiz>/notebook/exportacion/
+# Rutas: este archivo está en <raiz>/src/notebook/exportacion/
 CARPETA_EXPORTACIONES = os.path.dirname(os.path.abspath(__file__))
 CARPETA_NOTEBOOK = os.path.dirname(CARPETA_EXPORTACIONES)
-RAIZ_PROYECTO = os.path.dirname(CARPETA_NOTEBOOK)
+RAIZ_PROYECTO = os.path.dirname(os.path.dirname(CARPETA_NOTEBOOK))
 
 # Los archivos siempre quedan en <raiz>/data/crudo, sin importar desde dónde se ejecute.
 CARPETA_CRUDO = os.path.join(RAIZ_PROYECTO, "data", "crudo")

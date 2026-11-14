@@ -5,7 +5,7 @@ from pathlib import Path
 import pandas as pd
 
 # Rutas del proyecto (funcionan sin importar desde que carpeta se ejecute)
-RAIZ_PROYECTO = Path(__file__).resolve().parents[2]      # raiz del proyecto
+RAIZ_PROYECTO = Path(__file__).resolve().parents[3]      # raiz del proyecto
 CARPETA_LIMPIO = RAIZ_PROYECTO / "data" / "limpio"
 RUTA_LIMPIO = CARPETA_LIMPIO / "categorias_limpio.csv"
 

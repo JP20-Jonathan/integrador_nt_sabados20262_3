@@ -7,11 +7,11 @@ Ejecutar desde la raiz del proyecto:
 """
 import pandas as pd
 
-from notebook.consultas.consulta_categorias import ejecutar_consultas
-from notebook.exportacion.exportacion_categorias import exportar
-from notebook.graficas.reporte_categorias import generar_reporte
-from notebook.limpieza.limpieza_categorias import COLUMNAS_OBLIGATORIAS, limpiar
-from notebook.simulaciones.simulacion_categorias import FILAS, generar_categorias
+from src.notebook.consultas.consulta_categorias import ejecutar_consultas
+from src.notebook.exportacion.exportacion_categorias import exportar
+from src.notebook.graficas.reporte_categorias import generar_reporte
+from src.notebook.limpieza.limpieza_categorias import COLUMNAS_OBLIGATORIAS, limpiar
+from src.notebook.simulaciones.simulacion_categorias import FILAS, generar_categorias
 
 COLUMNAS = ["id", "nombre", "descripcion", "area_responsable"]
 
