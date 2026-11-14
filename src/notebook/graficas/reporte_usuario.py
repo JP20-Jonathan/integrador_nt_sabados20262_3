@@ -2,7 +2,7 @@
 reporte_usuario.py - USR-G01: tres graficas con matplotlib y conclusiones de `usuarios`.
 
 Ejecutar desde la raiz del proyecto:
-    python notebook/graficas/reporte_usuario.py
+    python src/notebook/graficas/reporte_usuario.py
         lee data/limpio/usuarios_limpio.csv y guarda reportes/usuarios_grafica_N.png
         (si existe data/crudo/usuarios_sucio.csv, lo usa para contar los correos
         repetidos e invalidos que llegaron antes de limpiar)

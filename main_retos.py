@@ -7,11 +7,11 @@ Ejecutar desde la raiz del proyecto:
 """
 import pandas as pd
 
-from notebook.consultas.consulta_reto import ejecutar_consultas
-from notebook.exportacion.exportacion_reto import exportar
-from notebook.graficas.reporte_reto import generar_reporte
-from notebook.limpieza.limpieza_reto import COLUMNAS_OBLIGATORIAS, limpiar
-from notebook.simulaciones.simulacion_reto import FILAS, generar_retos
+from src.notebook.consultas.consulta_reto import ejecutar_consultas
+from src.notebook.exportacion.exportacion_reto import exportar
+from src.notebook.graficas.reporte_reto import generar_reporte
+from src.notebook.limpieza.limpieza_reto import COLUMNAS_OBLIGATORIAS, limpiar
+from src.notebook.simulaciones.simulacion_reto import FILAS, generar_retos
 
 COLUMNAS = [
     "id", "nombre", "descripcion", "fecha_inicio", "fecha_fin",

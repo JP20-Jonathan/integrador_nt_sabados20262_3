@@ -2,7 +2,7 @@
 limpieza_usuario.py - USR-L01: limpia los datos de `usuarios` con pandas.
 
 Ejecutar desde la raiz del proyecto:
-    python notebook/limpieza/limpieza_usuario.py
+    python src/notebook/limpieza/limpieza_usuario.py
         lee data/crudo/usuarios_sucio.csv y guarda data/limpio/usuarios_limpio.csv
 
 Imprime el diagnostico ANTES y DESPUES de limpiar (shape, info, nulos, duplicados)

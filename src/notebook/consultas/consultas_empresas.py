@@ -4,7 +4,7 @@ Lee   data/limpio/empresas_limpio.csv (el archivo LIMPIO, no el sucio)
 Guarda data/limpio/empresas_consulta_1.csv ... empresas_consulta_5.csv
 
 Se puede ejecutar solo (desde la raíz del proyecto):
-    python notebook/consultas/consultas_empresas.py
+    python src/notebook/consultas/consultas_empresas.py
 o desde main_empresa.py:
     python main_empresa.py
 """
@@ -13,9 +13,9 @@ import os
 
 import pandas as pd
 
-# Rutas: este archivo está en <raiz>/notebook/consultas/
+# Rutas: este archivo está en <raiz>/src/notebook/consultas/
 CARPETA_CONSULTAS = os.path.dirname(os.path.abspath(__file__))
-RAIZ_PROYECTO = os.path.dirname(os.path.dirname(CARPETA_CONSULTAS))
+RAIZ_PROYECTO = os.path.dirname(os.path.dirname(os.path.dirname(CARPETA_CONSULTAS)))
 
 CARPETA_LIMPIO = os.path.join(RAIZ_PROYECTO, "data", "limpio")
 RUTA_LIMPIO = os.path.join(CARPETA_LIMPIO, "empresas_limpio.csv")

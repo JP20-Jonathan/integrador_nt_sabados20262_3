@@ -13,7 +13,7 @@ import pandas as pd  # noqa: E402
 from matplotlib.ticker import MaxNLocator  # noqa: E402
 
 # Rutas del proyecto (funcionan sin importar desde que carpeta se ejecute)
-RAIZ_PROYECTO = Path(__file__).resolve().parents[2]      # raiz del proyecto
+RAIZ_PROYECTO = Path(__file__).resolve().parents[3]      # raiz del proyecto
 RUTA_LIMPIO = RAIZ_PROYECTO / "data" / "limpio" / "categorias_limpio.csv"
 RUTA_SUCIO = RAIZ_PROYECTO / "data" / "crudo" / "categorias_sucio.csv"
 CARPETA_REPORTES = RAIZ_PROYECTO / "reportes"

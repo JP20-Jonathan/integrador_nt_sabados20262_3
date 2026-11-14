@@ -2,7 +2,7 @@
 consulta_usuario.py - USR-Q01: cinco consultas sobre `usuarios` con pandas (dos con groupby).
 
 Ejecutar desde la raiz del proyecto:
-    python notebook/consultas/consulta_usuario.py
+    python src/notebook/consultas/consulta_usuario.py
         lee data/limpio/usuarios_limpio.csv y guarda data/limpio/usuarios_consulta_N.csv
 
 Cada consulta va en su propia funcion, imprime que pregunta responde y su resultado,

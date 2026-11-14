@@ -2,7 +2,7 @@
 consulta_registro.py - HU Q01: cinco consultas sobre `registros` con pandas (dos con groupby).
 
 Ejecutar desde la raiz del proyecto:
-    python notebook/consultas/consulta_registro.py
+    python src/notebook/consultas/consulta_registro.py
         lee data/limpio/registros_limpio.csv y guarda data/limpio/registros_consulta_N.csv
 
 Cada consulta va en su propia funcion, imprime que pregunta responde y su resultado,

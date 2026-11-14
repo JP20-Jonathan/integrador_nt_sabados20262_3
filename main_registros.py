@@ -33,7 +33,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent
 os.chdir(RAIZ)
 for carpeta in ("exportacion", "limpieza", "consultas", "graficas"):
-    sys.path.insert(0, str(RAIZ / "notebook" / carpeta))
+    sys.path.insert(0, str(RAIZ / "src" / "notebook" / carpeta))
 
 from exportacion_registro import exportar
 from limpieza_registro import limpiar_registros, RUTA_SUCIO, RUTA_LIMPIO
@@ -45,8 +45,8 @@ REVISOR = RAIZ / "revisar-simulacion-registros" / "scripts" / "revisar_datos.py"
 VERIFICADOR_LIMPIEZA = RAIZ / "limpiar-registros" / "scripts" / "verificar_limpieza.py"
 VERIFICADOR_CONSULTAS = RAIZ / "consultar-registros" / "scripts" / "verificar_consultas.py"
 VERIFICADOR_REPORTE = RAIZ / "graficar-registros" / "scripts" / "verificar_reporte.py"
-SCRIPT_CONSULTAS = RAIZ / "notebook" / "consultas" / "consulta_registro.py"
-SCRIPT_REPORTE = RAIZ / "notebook" / "graficas" / "reporte_registro.py"
+SCRIPT_CONSULTAS = RAIZ / "src" / "notebook" / "consultas" / "consulta_registro.py"
+SCRIPT_REPORTE = RAIZ / "src" / "notebook" / "graficas" / "reporte_registro.py"
 
 #Se llenan con los argumentos en main()
 COMPLETO = False
